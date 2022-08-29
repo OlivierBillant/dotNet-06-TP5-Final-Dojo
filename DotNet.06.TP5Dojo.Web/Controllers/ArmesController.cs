@@ -5,22 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BO;
+using DotNet._06.TP5Dojo.Web.Models;
+using DotNet._06.TP5Dojo.Business;
 
 namespace DotNet._06.TP5Dojo.Web.Controllers
 {
     public class ArmesController : Controller
     {
         private readonly DojoContext _context;
+        private readonly ArmeService armeService;
 
-        public ArmesController(DojoContext context)
+
+        public ArmesController(DojoContext context, ArmeService armeService)
         {
             _context = context;
+            this.armeService = armeService;
         }
 
         // GET: Armes
         public async Task<IActionResult> Index()
         {
+            List<ArmeViewModel> armes = armeService.GetArmes();
               return _context.Arme != null ? 
                           View(await _context.Arme.ToListAsync()) :
                           Problem("Entity set 'DojoContext.Arme'  is null.");
@@ -55,7 +60,7 @@ namespace DotNet._06.TP5Dojo.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nom,Degats")] Arme arme)
+        public async Task<IActionResult> Create([Bind("Id,Nom,Degats")] ArmeViewModel arme)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +92,7 @@ namespace DotNet._06.TP5Dojo.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nom,Degats")] Arme arme)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nom,Degats")] ArmeViewModel arme)
         {
             if (id != arme.Id)
             {

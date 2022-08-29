@@ -1,10 +1,10 @@
-﻿namespace BO
+﻿namespace DotNet._06.TP5Dojo.Web.Models
 {
-    public class Samourai
+    public class SamouraiViewModel
     {
         public int Id { get; set; }
         public int Force { get; set; }
         public string Nom { get; set; }
-        public virtual Arme Arme { get; set; }
+        public virtual ArmeViewModel Arme { get; set; }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace BO
+﻿namespace DotNet._06.TP5Dojo.Web.Models
 {
-    public class Arme
+    public class ArmeViewModel
     {
         public int Id { get; set; }
         public string Nom { get; set; }

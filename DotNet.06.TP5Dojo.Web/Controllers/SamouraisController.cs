@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BO;
+using DotNet._06.TP5Dojo.Web.Models;
 
 namespace DotNet._06.TP5Dojo.Web.Controllers
 {
@@ -55,7 +55,7 @@ namespace DotNet._06.TP5Dojo.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Force,Nom")] Samourai samourai)
+        public async Task<IActionResult> Create([Bind("Id,Force,Nom")] SamouraiViewModel samourai)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace DotNet._06.TP5Dojo.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Force,Nom")] Samourai samourai)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Force,Nom")] SamouraiViewModel samourai)
         {
             if (id != samourai.Id)
             {
