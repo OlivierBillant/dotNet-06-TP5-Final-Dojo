@@ -1,0 +1,17 @@
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\bin\Debug\net6.0\DotNet.06.TP5Dojo.Business.deps.json
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\bin\Debug\net6.0\DotNet.06.TP5Dojo.Business.runtimeconfig.json
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\bin\Debug\net6.0\DotNet.06.TP5Dojo.Business.dll
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\bin\Debug\net6.0\DotNet.06.TP5Dojo.Business.pdb
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\bin\Debug\net6.0\DotNet.06.TP5Dojo.Dal.dll
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\bin\Debug\net6.0\DotNet.06.TP5Dojo.Dal.pdb
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\DotNet.06.TP5Dojo.Business.csproj.AssemblyReference.cache
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\DotNet.06.TP5Dojo.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\DotNet.06.TP5Dojo.Business.AssemblyInfoInputs.cache
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\DotNet.06.TP5Dojo.Business.AssemblyInfo.cs
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\DotNet.06.TP5Dojo.Business.csproj.CoreCompileInputs.cache
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\DotNet.06.TP5Dojo.Business.csproj.CopyComplete
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\DotNet.06.TP5Dojo.Business.dll
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\refint\DotNet.06.TP5Dojo.Business.dll
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\DotNet.06.TP5Dojo.Business.pdb
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\DotNet.06.TP5Dojo.Business.genruntimeconfig.cache
+C:\Users\obillant2022\Documents\DotNet\TP\DotNet.TP\DotNet.06.TP5Dojo\DotNet.06.TP5Dojo.Business\obj\Debug\net6.0\ref\DotNet.06.TP5Dojo.Business.dll
