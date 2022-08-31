@@ -35,15 +35,15 @@ public class SamouraiService
     }
 
     public async Task AddSamouraiAsync(SamouraiDto samouraiDto, int? armeId)
-    {        
+    {
         var samourai = SamouraiDto.ToSamourai(samouraiDto);
-        
+
         // Recherche de l'arme correspondant à l'id.
         var arme = await this.armeAccessLayer.GetByIdAsync(armeId);
 
         if (arme is not null)
             samourai.Arme = arme;
-        
+
         await this.samouraiAccessLayer.AddAsync(samourai);
     }
 
@@ -65,4 +65,9 @@ public class SamouraiService
         await this.samouraiAccessLayer.RemoveAsync(id);
     }
 
+    public async Task<bool> DejaAttribuee(int? armeId)
+    {
+        var arme = await this.armeAccessLayer.GetByIdAsync(armeId);
+        return arme?.Samourai?.Id > 0;
+    }
 }

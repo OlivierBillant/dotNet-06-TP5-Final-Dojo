@@ -35,6 +35,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJtZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/obillant2022/Documents/DotNet/TP/DotNet.TP/DotNet.06.TP5Dojo/TpDojo.Web/Views/ArtMartial/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0TWFydGlhbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/obillant2022/Documents/DotNet/TP/DotNet.TP/DotNet.06.TP5Dojo/TpDojo.Web/Views/ArtMartial/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0TWFydGlhbFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/obillant2022/Documents/DotNet/TP/DotNet.TP/DotNet.06.TP5Dojo/TpDojo.Web/Views/ArtMartial/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0TWFydGlhbFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/obillant2022/Documents/DotNet/TP/DotNet.TP/DotNet.06.TP5Dojo/TpDojo.Web/Views/ArtMartial/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0TWFydGlhbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/obillant2022/Documents/DotNet/TP/DotNet.TP/DotNet.06.TP5Dojo/TpDojo.Web/Views/ArtMartial/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0TWFydGlhbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/obillant2022/Documents/DotNet/TP/DotNet.TP/DotNet.06.TP5Dojo/TpDojo.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

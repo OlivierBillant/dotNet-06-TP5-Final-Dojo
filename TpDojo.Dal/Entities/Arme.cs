@@ -2,12 +2,12 @@
 
 using System.ComponentModel.DataAnnotations;
 
-public class Arme
+public class Arme : ADataObject
 {
-    public int Id { get; set; }
-
     [Required]
     public string Nom { get; set; }
 
     public int Degats { get; set; }
+
+    public Samourai Samourai { get; set; }
 }

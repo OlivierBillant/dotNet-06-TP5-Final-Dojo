@@ -14,6 +14,7 @@ public static class BusinessExtensions
     public static void AddBusinessServices(this IServiceCollection services)
     {
         services.AddTransient<ArmeService>();
+        services.AddTransient<ArtMartialService>();
         services.AddTransient<SamouraiService>();
         services.AddDalServices();
     }

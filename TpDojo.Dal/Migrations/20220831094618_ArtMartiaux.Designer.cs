@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TpDojo.Dal;
 
@@ -11,9 +12,10 @@ using TpDojo.Dal;
 namespace TpDojo.Dal.Migrations
 {
     [DbContext(typeof(TpDojoContext))]
-    partial class TpDojoContextModelSnapshot : ModelSnapshot
+    [Migration("20220831094618_ArtMartiaux")]
+    partial class ArtMartiaux
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -72,7 +74,7 @@ namespace TpDojo.Dal.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("ArmeId")
+                    b.Property<int?>("ArmeId")
                         .HasColumnType("int");
 
                     b.Property<int>("Force")
@@ -84,8 +86,7 @@ namespace TpDojo.Dal.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ArmeId")
-                        .IsUnique();
+                    b.HasIndex("ArmeId");
 
                     b.ToTable("Samourai");
                 });
@@ -100,18 +101,10 @@ namespace TpDojo.Dal.Migrations
             modelBuilder.Entity("TpDojo.Dal.Entities.Samourai", b =>
                 {
                     b.HasOne("TpDojo.Dal.Entities.Arme", "Arme")
-                        .WithOne("samourai")
-                        .HasForeignKey("TpDojo.Dal.Entities.Samourai", "ArmeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("ArmeId");
 
                     b.Navigation("Arme");
-                });
-
-            modelBuilder.Entity("TpDojo.Dal.Entities.Arme", b =>
-                {
-                    b.Navigation("samourai")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("TpDojo.Dal.Entities.Samourai", b =>

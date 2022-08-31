@@ -15,6 +15,7 @@ public static class DalExtensions
         var configuration = provider.GetRequiredService<IConfiguration>();
 
         services.AddTransient<IArmeAccessLayer, ArmeAccessLayer>();
+        services.AddTransient<IArtMartialAccessLayer, ArtMartialAccessLayer>();
         services.AddTransient<ISamouraiAccessLayer, SamouraiAccessLayer>();
 
 

@@ -19,13 +19,13 @@ internal class SamouraiAccessLayer : ISamouraiAccessLayer
     }
 
     public async Task<List<Samourai>> GetAllAsync()
-        => await this.context.Samourai.Include(s => s.Arme).ToListAsync();
+        => await this.context.Samourai.Include(s => s.Arme).Include(s => s.ArtMartiaux).ToListAsync();
 
     public async Task<bool> ExistsAsync(int id)
         => await this.context.Samourai.AnyAsync(a => a.Id == id);
 
     public async Task<Samourai?> GetByIdAsync(int? id)
-    => await this.context.Samourai.Include(s => s.Arme).FirstOrDefaultAsync(a => a.Id == id);
+    => await this.context.Samourai.Include(s => s.Arme).Include(s => s.ArtMartiaux).FirstOrDefaultAsync(a => a.Id == id);
 
     public async Task AddAsync(Samourai arme)
     {

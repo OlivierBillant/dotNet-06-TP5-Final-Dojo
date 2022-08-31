@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DirHLhVLKRQ4hX76IiWkFBJCQVr4iGsc/3BqKJ6fBCLFusk1N4FF+oWgCDlFqDnlDnLOO+mh39rIcKTEIy4ZKw==",
+  "dgSpecHash": "4mBKsBbuVVWxkw/ttSEV+oPteo2sZA/zYVNnoJzakDsCQmMHIgnqo8hqN4xdW/ynl2XjJrW5R4bSMXFzqn8ftA==",
   "success": true,
   "projectFilePath": "C:\\Users\\obillant2022\\Documents\\DotNet\\TP\\DotNet.TP\\DotNet.06.TP5Dojo\\TpDojo.Web\\TpDojo.Web.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\obillant2022\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.8\\microsoft.entityframeworkcore.design.6.0.8.nupkg.sha512",
     "C:\\Users\\obillant2022\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.8\\microsoft.entityframeworkcore.relational.6.0.8.nupkg.sha512",
     "C:\\Users\\obillant2022\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.8\\microsoft.entityframeworkcore.sqlserver.6.0.8.nupkg.sha512",
+    "C:\\Users\\obillant2022\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.8\\microsoft.entityframeworkcore.tools.6.0.8.nupkg.sha512",
     "C:\\Users\\obillant2022\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\obillant2022\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "C:\\Users\\obillant2022\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

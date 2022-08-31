@@ -19,13 +19,13 @@ internal class ArmeAccessLayer : IArmeAccessLayer
     }
 
     public async Task<List<Arme>> GetAllAsync()
-        => await this.context.Arme.ToListAsync();
+        => await this.context.Arme.Include(a => a.Samourai).ToListAsync();
 
     public async Task<bool> ExistsAsync(int id)
         => await this.context.Arme.AnyAsync(a => a.Id == id);
 
     public async Task<Arme?> GetByIdAsync(int? id)
-    => await this.context.Arme.FirstOrDefaultAsync(a => a.Id == id);
+    => await this.context.Arme.Include(a => a.Samourai).FirstOrDefaultAsync(a => a.Id == id);
 
     public async Task AddAsync(Arme arme)
     {

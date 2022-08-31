@@ -58,11 +58,20 @@ public class SamouraisController : Controller
     {
         if (this.ModelState.IsValid)
         {
-            var samouraiDto = SamouraiFormViewModel.ToSamouraiDto(samourai);
+                if (await samouraiService.DejaAttribuee(samourai.ArmeId))
+                {
+                    this.ModelState.AddModelError("", "Cette arme est déjà attribuée");
+                    return this.View();
+                }
 
+            var samouraiDto = SamouraiFormViewModel.ToSamouraiDto(samourai);
             await this.samouraiService.AddSamouraiAsync(samouraiDto, samourai.ArmeId);
             return this.RedirectToAction(nameof(Index));
-        }
+ 
+                //Validation sur l'existance d'une pizza portant ce nom
+
+
+            }
         return this.View(samourai);
     }
 
