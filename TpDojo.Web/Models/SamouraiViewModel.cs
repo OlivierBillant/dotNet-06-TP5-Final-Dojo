@@ -20,7 +20,7 @@ public class SamouraiViewModel
     public string ArtMartialDisplay => this.ArtMartiaux.Count switch
     {
         0 => "Aucun art martial disponible",
-        _ => this.Arme.Nom
+        _ => string.Join(", ", this.ArtMartiaux.Select(i => i.Nom))
     };
 
     internal static SamouraiViewModel FromSamouraiDto(SamouraiDto? samourai)

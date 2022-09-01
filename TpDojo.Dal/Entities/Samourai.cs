@@ -10,6 +10,6 @@ public class Samourai : ADataObject
     public string Nom { get; set; }
     public Arme? Arme { get; set; }
 
-    public int ArmeId { get; set; }
+    public int? ArmeId { get; set; }
     public List<ArtMartial> ArtMartiaux { get; set; } = new();
 }

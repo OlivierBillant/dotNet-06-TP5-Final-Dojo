@@ -10,19 +10,21 @@ public class SamouraisController : Controller
 {
     private readonly SamouraiService samouraiService;
     private readonly ArmeService armeService;
+    private readonly ArtMartialService artMartialService;
 
-    public SamouraisController(SamouraiService samouraiService, ArmeService armeService)
+    public SamouraisController(SamouraiService samouraiService, ArmeService armeService, ArtMartialService artMartialService)
     {
         this.samouraiService = samouraiService;
         this.armeService = armeService;
+        this.artMartialService = artMartialService;
     }
 
     // GET: Samourais
     public async Task<IActionResult> Index()
     {
         var samouraiDtos = await this.samouraiService.GetSamouraisAsync();
-        var armes = SamouraiViewModel.FromSamourais(samouraiDtos);
-        return this.View(armes);
+        var samouraisViewModel = SamouraiViewModel.FromSamourais(samouraiDtos);
+        return this.View(samouraisViewModel);
     }
 
     // GET: Samourais/Details/5
@@ -58,20 +60,22 @@ public class SamouraisController : Controller
     {
         if (this.ModelState.IsValid)
         {
-                if (await samouraiService.DejaAttribuee(samourai.ArmeId))
-                {
-                    this.ModelState.AddModelError("", "Cette arme est déjà attribuée");
-                    return this.View();
-                }
+            if (await samouraiService.DejaAttribuee(samourai.ArmeId))
+            {
+                this.ModelState.AddModelError("ArmeId", "Cette arme est déjà attribuée");
+                await this.ChargerListesAsync();
+
+                return this.View();
+            }
 
             var samouraiDto = SamouraiFormViewModel.ToSamouraiDto(samourai);
             await this.samouraiService.AddSamouraiAsync(samouraiDto, samourai.ArmeId);
             return this.RedirectToAction(nameof(Index));
- 
-                //Validation sur l'existance d'une pizza portant ce nom
+
+            //Validation sur l'existance d'une pizza portant ce nom
 
 
-            }
+        }
         return this.View(samourai);
     }
 
@@ -154,11 +158,12 @@ public class SamouraisController : Controller
 
     private async Task<bool> SamouraiExists(int id)
     {
-      return await this.samouraiService.SamouraiExistsAsync(id);
+        return await this.samouraiService.SamouraiExistsAsync(id);
     }
 
     private async Task ChargerListesAsync()
     {
         this.ViewData["Armes"] = ArmeViewModel.FromArmes(await this.armeService.GetArmesAsync());
+        this.ViewData["ArtMartiaux"] = ArtMartialViewModel.FromArtMartiaux(await this.artMartialService.GetArtMartiauxAsync());
     }
 }

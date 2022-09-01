@@ -10,7 +10,13 @@
                                     Value = a.Id.ToString()
                                 }).ToList();
     armesItems.Insert(0, new SelectListItem { Value = string.Empty, Text = "Aucune arme" });
-
+    var artMartiauxItems = (this.ViewData["ArtMartiaux"] as List<ArtMartialViewModel> ?? new List<ArtMartialViewModel>())
+                            .Select(am => new SelectListItem 
+                                {
+                                    Text = am.Nom,
+                                    Value = am.Id.ToString()
+                                })
+                            .ToList();
 }
 
 <h1>Create</h1>
@@ -31,11 +37,16 @@
                 <input asp-for="Force" class="form-control" />
                 <span asp-validation-for="Force" class="text-danger"></span>
             </div>
-           
+
             <div class="form-group">
                 <label asp-for="ArmeId" class="control-label"></label>
                 <select asp-for="ArmeId" class="form-control" asp-items="@armesItems"></select>
                 <span asp-validation-for="ArmeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtMartiauxId" class="control-label"></label>
+                <select asp-for="ArtMartiauxId" class="form-control" asp-items="@artMartiauxItems"></select>
+                <span asp-validation-for="ArtMartiauxId" class="text-danger"></span>
             </div>
 
             <div class="form-group">
@@ -50,5 +61,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

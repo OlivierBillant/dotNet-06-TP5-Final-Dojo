@@ -9,6 +9,7 @@ namespace TpDojo.Dal.Entities
     public class ArtMartial : ADataObject
     {
         public string Nom { get; set; }
+        public List<Samourai> Samourais { get; set; }
     }
 
 }
